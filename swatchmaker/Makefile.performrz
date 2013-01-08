@@ -1,0 +1,16 @@
+#
+# BUILD BOOTSWATCH SWATCH
+#
+
+PERFORMRZ_PATH = performrz
+
+default:
+	make performrz
+
+performrz:
+	lessc performrz.less > ${PERFORMRZ_PATH}/bootstrap.css
+	lessc --compress  performrz.less > ${PERFORMRZ_PATH}/bootstrap.min.css
+	lessc performrz-responsive.less > ${PERFORMRZ_PATH}/bootstrap-responsive.css
+	lessc --compress  performrz-responsive.less > ${PERFORMRZ_PATH}/bootstrap-responsive.min.css
+
+.PHONY: performrz default
