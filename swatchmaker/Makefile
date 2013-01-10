@@ -3,6 +3,7 @@
 #
 
 OUTPUT_PATH = swatch
+PERFORMRZ_PATH = performrz
 
 bootswatch:
 	lessc swatchmaker.less > ${OUTPUT_PATH}/bootstrap.css
@@ -24,5 +25,11 @@ default:
 	curl --location -o swatch/bootswatch.less https://raw.github.com/thomaspark/bootswatch/gh-pages/swatchmaker/swatch/bootswatch.less
 	make bootswatch
 
-.PHONY: bootswatch bootstrap default
+performrz:
+	lessc performrz.less > ${PERFORMRZ_PATH}/bootstrap.css
+	lessc --compress  performrz.less > ${PERFORMRZ_PATH}/bootstrap.min.css
+	lessc performrz-responsive.less > ${PERFORMRZ_PATH}/bootstrap-responsive.css
+	lessc --compress  performrz-responsive.less > ${PERFORMRZ_PATH}/bootstrap-responsive.min.css
+
+.PHONY: performrz bootswatch bootstrap default
 
