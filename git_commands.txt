@@ -1,0 +1,4 @@
+git remote add upstream https://github.com/thomaspark/bootswatch.git
+# git remote rm upstream
+git fetch upstream
+git merge upstream/gh-pages
