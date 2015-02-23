@@ -6631,7 +6631,7 @@ table .text-muted,
   border-color: #0000ff;
 }
 legend {
-  color: #fff;
+  color: #00ff00;
 }
 .input-group-addon {
   background-color: #a8a8a8;
@@ -6640,7 +6640,7 @@ legend {
 .nav-pills a,
 .breadcrumb a,
 .pager a {
-  color: #fff;
+  color: #00ff00;
 }
 .alert .alert-link,
 .alert a {
