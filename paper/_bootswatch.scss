@@ -1,4 +1,4 @@
-// Paper 3.3.2
+// Paper 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
@@ -223,13 +223,20 @@ select.form-control {
   label {
     padding-left: 25px;
   }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: -25px;
+  }
 }
 
 input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
+  position: relative;
   margin-top: 5px;
-  margin-left: -25px;
+  margin-right: 4px;
+  vertical-align: -4px;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -284,7 +291,8 @@ input[type="radio"],
 input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  margin-left: -25px;
+  position: relative;
+  vertical-align: -4px;
   border: none;
   -webkit-appearance: none;
   appearance: none;
@@ -589,3 +597,12 @@ input[type="checkbox"],
   border: none;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
+
+.carousel {
+  &-caption {
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+  }
+}
+
