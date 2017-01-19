@@ -7,14 +7,29 @@ Bootswatch is a collection of open source themes for [Bootstrap](http://getboots
 
 Usage
 -----
-Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet.
+Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/).
+The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
 
- Rails users should check out:
+You can import a theme into your styles using either LESS or SASS.
 
-* [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) if using _LESS_.
-* [bootswatch-rails](https://github.com/maxim/bootswatch-rails) if using _SASS_.
+LESS:
+
+```
+@import "bootstrap/less/bootstrap.less";
+@import "bootswatch/theme/variables.less";
+@import "bootswatch/theme/bootswatch.less";
+
+```
+
+SASS:
+
+```
+@import "bootswatch/theme/variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bootswatch/theme/bootswatch";
+
+```
 
 
 Customization
@@ -40,7 +55,7 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
 
-**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
+**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt convert_less` to build the CSS and SASS.
 
 **Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
 
@@ -64,6 +79,6 @@ Thanks
 
 Copyright and License
 ----
-Copyright 2014 Thomas Park
+Copyright 2014-2016 Thomas Park
 
 Code released under the MIT License.
