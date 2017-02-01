@@ -58,7 +58,20 @@ def main():
         f.write(line)
     f.close()
     
-    cmd = "/cygdrive/c/Users/keeshand/AppData/Roaming/npm/grunt swatch:vurple"
+    cmd = "/cygdrive/c/Users/keeshand/AppData/Roaming/npm/grunt swatch:{0}".format(values['lc'])
+    os.system(cmd)
+    
+    cmd = "cp {0}/bootstrap.min.css ../vurple_com/pelican-themes/bootstrap3/static/css/bootstrap.{0}.min.css".format(values['lc'])
+    os.system(cmd)
+    
+    cmd = "cp bower_components/font-awesome/css/*.css ../vurple_com/pelican-themes/bootstrap3/static/css/."
+    os.system(cmd)
+    cmd = "cp bower_components/font-awesome/fonts/* ../vurple_com/pelican-themes/bootstrap3/static/fonts/."
+    os.system(cmd)
+
+    cmd = "cp bower_components/bootstrap/fonts/* ../vurple_com/pelican-themes/bootstrap3/static/fonts/."
+    os.system(cmd)
+    cmd = "cp bower_components/bootstrap/dist/js/* ../vurple_com/pelican-themes/bootstrap3/static/js/."
     os.system(cmd)
 
 if __name__ == '__main__':
