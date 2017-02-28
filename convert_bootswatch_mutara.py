@@ -3,7 +3,10 @@ import os
 
 values = { 
 #     'uc': 'Grissom',
-    'lc': 'grissom',
+    'lc': 'mutara',
+    'header': 'Michroma',
+    'body': 'Play',
+    'website': 'mavek_org',
 #     'cl': '#116BB7',
 }
 
@@ -27,8 +30,8 @@ def main():
         if re.search("Roboto", line):
             continue
         if re.search("web-font-path", line):
-            line = '@web-font-path2: "https://fonts.googleapis.com/css?family=Orbitron:400,700,400italic";\n' + line
-            line = '@web-font-path: "https://fonts.googleapis.com/css?family=Michroma:300italic,400italic,700italic,400,300,700";\n' + line
+            line = '@web-font-path2: "https://fonts.googleapis.com/css?family={0}:400,700,400italic";\n'.format(values['body']) + line
+            line = '@web-font-path: "https://fonts.googleapis.com/css?family={0}:300italic,400italic,700italic,400,300,700";\n'.format(values['header']) + line
             line = line + '.web-font(@web-font-path2);\n'
         
         f.write(line)
@@ -43,7 +46,7 @@ def main():
     swap_list = {
         '@brand-primary:':                      '@brand-primary:         #00ff00',
         '@brand-success:':                      '@brand-success:         #0000ff',
-        '@text-color:':                         '@text-color:            #80ff80',
+        '@text-color:':                         '@text-color:            #ffffff',
         '@headings-color:':                     '@headings-color:          #00ff00',
         '@border-radius-base:':                 '@border-radius-base:        20px',
         '@border-radius-large:':                '@border-radius-large:       22px',
@@ -93,17 +96,6 @@ def main():
         '@breadcrumb-color:':                   '@breadcrumb-color:              #00ff00',
         '@carousel-control-color:':             '@carousel-control-color:                      #000',
 #         '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
-#        '': '',
     }
 
     outfile = values['lc'] + "/variables.less"
@@ -111,15 +103,15 @@ def main():
     for line in lines:
         line = re.sub(src.title(), values['lc'].title(), line)
         line = re.sub(src, values['lc'], line)
-        line = re.sub('Roboto', 'Michroma', line)
+        #line = re.sub('Roboto', 'Michroma', line)
 
         for s in swap_list.keys():
             if re.search(s, line):
                 line = swap_list[s] + ";\n"
-#         line = re.sub('headings-font-family:    @font-family-base', 'headings-font-family:    @font-family-header-sans-serif', line)
-#         if re.search("Roboto", line):
-#             line = re.sub('Roboto', 'Michroma', line)
-#             line = '@font-family-header-sans-serif:  "Orbitron", "Helvetica Neue", Helvetica, Arial, sans-serif;\n' + line
+        line = re.sub('headings-font-family:    @font-family-base', 'headings-font-family:    @font-family-header-sans-serif', line)
+        if re.search("Roboto", line):
+            line = re.sub('Roboto', '{0}'.format(values['body']), line)
+            line = '@font-family-header-sans-serif:  "{0}", "Helvetica Neue", Helvetica, Arial, sans-serif;\n'.format(values['header']) + line
         f.write(line)
     f.close()
 
@@ -141,6 +133,12 @@ def main():
     
     grunt = "/cygdrive/c/Users/keeshand/AppData/Roaming/npm/grunt"
     cmd = "{0} swatch:{1}".format(grunt, values['lc'])
+    os.system(cmd)
+    
+    
+    cmd = "cp {0}/bootstrap.min.css ../{1}/pelican-themes/bootstrap3/static/css/bootstrap.{0}.min.css".format(values['lc'], values['website'])
+    os.system(cmd)
+    cmd = "cp {0}/bootstrap_fixes.css ../{1}/pelican-themes/bootstrap3/static/css/bootstrap_fixes.{0}.css".format(values['lc'], values['website'])
     os.system(cmd)
 
 if __name__ == '__main__':

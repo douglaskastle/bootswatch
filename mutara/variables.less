@@ -1,4 +1,4 @@
-// Mutara 1.1.1
+// Mutara 3.3.7
 // Variables
 // --------------------------------------------------
 
@@ -28,7 +28,7 @@
 //** Background color for `<body>`.
 @body-bg:               #060606;
 //** Global text color on `<body>`.
-@text-color:            #80ff80;
+@text-color:            #ffffff;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -42,7 +42,8 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Michroma", sans-serif;
+@font-family-header-sans-serif:  "Michroma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Play", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -65,7 +66,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    @font-family-base;
+@headings-font-family:    @font-family-header-sans-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          #00ff00;
@@ -111,7 +112,7 @@
 //** Global background color for active items (e.g., navs or dropdowns).
 @component-active-bg:       @brand-primary;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+//** Width of the `border` for generating carets that indicate dropdowns.
 @caret-width-base:          4px;
 //** Carets increase slightly in size for larger components.
 @caret-width-large:         5px;
@@ -170,6 +171,11 @@
 
 @btn-link-disabled-color:        @gray-light;
 
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
 
 //== Forms
 //
@@ -206,6 +212,7 @@
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
 //** `.form-group` margin
 @form-group-margin-bottom:       15px;
 
@@ -382,7 +389,7 @@
 @navbar-default-toggle-border-color:       @gray-dark;
 
 
-// Inverted navbar
+//=== Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
 @navbar-inverse-bg:                         @gray-darker;
@@ -462,7 +469,6 @@
 //
 //##
 
-@pager-color:                          @pagination-color;
 @pager-bg:                             @pagination-bg;
 @pager-border:                         @pagination-border;
 @pager-border-radius:                  15px;
@@ -480,10 +486,11 @@
 //##
 
 @jumbotron-padding:              30px;
-@jumbotron-color:                @text-color;
+@jumbotron-color:                inherit;
 @jumbotron-bg:                   darken(@gray-darker, 5%);
-@jumbotron-heading-color:        @text-color;
+@jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
+@jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
 
 
 //== Form states and alerts
@@ -857,5 +864,7 @@
 @page-header-border-color:    @gray-dark;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
+//** Point at which .dl-horizontal becomes horizontal
+@dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
 @hr-border:                   @gray-dark;

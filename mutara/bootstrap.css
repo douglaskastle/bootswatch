@@ -1,4 +1,5 @@
-@import url("//fonts.googleapis.com/css?family=Michroma:400,700");
+@import url("https://fonts.googleapis.com/css?family=Michroma:300italic,400italic,700italic,400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Play:400,700,400italic");
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
@@ -1086,10 +1087,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Michroma", sans-serif;
+  font-family: "Play", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #80ff80;
+  color: #ffffff;
   background-color: #060606;
 }
 input,
@@ -1187,7 +1188,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Michroma", sans-serif;
+  font-family: "Michroma", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: #00ff00;
@@ -2505,7 +2506,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #80ff80;
+  color: #ffffff;
   border: 0;
   border-bottom: 1px solid #282828;
 }
@@ -2548,7 +2549,7 @@ output {
   padding-top: 9px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #80ff80;
+  color: #ffffff;
 }
 .form-control {
   display: block;
@@ -2557,7 +2558,7 @@ output {
   padding: 8px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #80ff80;
+  color: #ffffff;
   background-color: #282828;
   background-image: none;
   border: 1px solid #282828;
@@ -3904,7 +3905,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #80ff80;
+  color: #ffffff;
   text-align: center;
   background-color: #adafae;
   border: 1px solid #282828;
@@ -4509,10 +4510,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #80ff80;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #80ff80;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4553,7 +4554,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #80ff80;
+    color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4574,13 +4575,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #80ff80;
+  color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
   color: #00ff00;
 }
 .navbar-default .btn-link {
-  color: #80ff80;
+  color: #ffffff;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -4710,7 +4711,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #00ff00;
 }
 .breadcrumb > .active {
-  color: #80ff80;
+  color: #ffffff;
 }
 .pagination {
   display: inline-block;
@@ -4963,12 +4964,12 @@ a.badge:focus {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  color: #80ff80;
+  color: inherit;
   background-color: #151515;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: #80ff80;
+  color: inherit;
 }
 .jumbotron p {
   margin-bottom: 15px;
@@ -5026,7 +5027,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #80ff80;
+  color: #ffffff;
 }
 .alert {
   padding: 15px;
@@ -5268,7 +5269,7 @@ a.thumbnail.active {
 }
 a.list-group-item,
 button.list-group-item {
-  color: #80ff80;
+  color: #ffffff;
 }
 a.list-group-item .list-group-item-heading,
 button.list-group-item .list-group-item-heading {
@@ -5279,7 +5280,7 @@ button.list-group-item:hover,
 a.list-group-item:focus,
 button.list-group-item:focus {
   text-decoration: none;
-  color: #80ff80;
+  color: #ffffff;
   background-color: #484848;
 }
 button.list-group-item {
@@ -5690,7 +5691,7 @@ button.list-group-item-danger.active:focus {
   border-color: #282828;
 }
 .panel-default > .panel-heading {
-  color: #80ff80;
+  color: #ffffff;
   background-color: #3c3c3c;
   border-color: #282828;
 }
@@ -5699,7 +5700,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading .badge {
   color: #3c3c3c;
-  background-color: #80ff80;
+  background-color: #ffffff;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #282828;
@@ -5994,7 +5995,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Michroma", sans-serif;
+  font-family: "Play", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6112,7 +6113,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Michroma", sans-serif;
+  font-family: "Play", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6775,6 +6776,12 @@ button.close {
 .text-info:hover {
   color: #9933cc;
 }
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
+}
 table,
 .table {
   color: #fff;
@@ -6797,6 +6804,14 @@ table .text-muted,
 }
 .has-warning .help-block,
 .has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label,
 .has-warning .form-control-feedback {
   color: #ff8800;
 }
@@ -6807,6 +6822,14 @@ table .text-muted,
 }
 .has-error .help-block,
 .has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label,
 .has-error .form-control-feedback {
   color: #cc0000;
 }
@@ -6817,6 +6840,14 @@ table .text-muted,
 }
 .has-success .help-block,
 .has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label,
 .has-success .form-control-feedback {
   color: #0000ff;
 }
@@ -6827,9 +6858,6 @@ table .text-muted,
 }
 legend {
   color: #fff;
-}
-.input-group-addon {
-  background-color: #a8a8a8;
 }
 .nav-tabs a,
 .nav-pills a,
