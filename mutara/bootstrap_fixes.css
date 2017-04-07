@@ -35,3 +35,6 @@ table, .table {
 a.list-group-item .list-group-item-heading {
   color: #00ff00;
 }
+a:visited {
+  color: #0000ff;
+}
