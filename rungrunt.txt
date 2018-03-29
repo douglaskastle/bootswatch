@@ -1,5 +1,5 @@
 sudo apt-get install npm nodejs-legacy
-npm install -g grunt-cli
+sudo npm install -g grunt-cli
 npm install
 grunt swatch:mutara
 grunt swatch:vurple
